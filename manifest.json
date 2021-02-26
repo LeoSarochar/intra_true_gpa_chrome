@@ -1,0 +1,11 @@
+{
+  "manifest_version": 2,
+ 
+  "name": "GPA Intra",
+  "version": "1.0",
+  "description": "Calculate true GPA",
+  "content_scripts": [{
+    "js": ["experience.js"],
+    "matches": ["https://intra.epitech.eu/user/*"]
+  }]
+}
