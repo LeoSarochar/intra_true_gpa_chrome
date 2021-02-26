@@ -68,4 +68,5 @@ const gpatag = findElemByText('label', 'G.P.A.', XPathResult.FIRST_ORDERED_NODE_
 gpatag.innerHTML = "G.P.A. (Cheh Jordan)"
 const neartag = findElemByText('span', '0.00', XPathResult.FIRST_ORDERED_NODE_TYPE)?.singleNodeValue;
 
-calcGPA();
+if (neartag)
+    calcGPA();
