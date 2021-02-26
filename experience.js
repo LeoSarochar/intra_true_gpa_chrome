@@ -65,8 +65,9 @@ const calcGPA = async () => {
 }
 
 const gpatag = findElemByText('label', 'G.P.A.', XPathResult.FIRST_ORDERED_NODE_TYPE)?.singleNodeValue;
-gpatag.innerHTML = "G.P.A. (Cheh Jordan)"
 const neartag = findElemByText('span', '0.00', XPathResult.FIRST_ORDERED_NODE_TYPE)?.singleNodeValue;
 
-if (neartag)
+if (neartag) {
+    gpatag.innerHTML = "G.P.A. (Cheh Jordan)"
     calcGPA();
+}
