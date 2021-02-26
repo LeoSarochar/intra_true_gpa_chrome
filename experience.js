@@ -70,4 +70,12 @@ const neartag = findElemByText('span', '0.00', XPathResult.FIRST_ORDERED_NODE_TY
 if (neartag) {
     gpatag.innerHTML = "G.P.A. (Cheh Jordan)"
     calcGPA();
+
+    setInterval(() => {
+        const meetingtag =  findElemByText('a', 'B3 - Administrative meetings', XPathResult.FIRST_ORDERED_NODE_TYPE)?.singleNodeValue;
+        if (meetingtag) {
+            meetingtag.parentNode.parentNode.getElementsByClassName("grade")[0].innerHTML = "-";
+            meetingtag.parentNode.parentNode.getElementsByClassName("number")[0].innerHTML = "0";
+        }
+    }, 100);
 }
